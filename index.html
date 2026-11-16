@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JLPT Map</title>
+<meta name="description" content="JLPT Map lays out the whole of Japanese grammar on one board, from N5 to N1, with examples you can read and quizzes to check yourself.">
+<style>
+  /* Same palette and font stack as privacy.html, so the two pages read as one
+     site rather than two. */
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #0a63c9;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131315;
+      --fg: #ececee;
+      --muted: #9d9da3;
+      --rule: #2c2c30;
+      --accent: #6ba8f5;
+      --on-accent: #131315;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 4rem 1.25rem 3rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  }
+  /* Wider than the 26rem this held when it was one button: paragraphs this long
+     need a line length that doesn't run to a dozen words. Prose is left-aligned
+     for the same reason — centred body text is hard to track back to the start
+     of the next line — and only the title and the button stay centred. */
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 1.5rem; letter-spacing: -.02em; text-align: center; }
+  /* The section headings. Set in the copy's own capitals, so the size does the
+     separating rather than the letterforms alone — caps at body size read as
+     shouting, caps at this size read as a heading. */
+  h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    letter-spacing: .02em;
+    margin: 2.75rem 0 .75rem;
+  }
+  p { margin: 0 0 1rem; }
+  .lead { font-size: 1.15rem; color: var(--muted); margin-bottom: 2.5rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .6rem; }
+  li b { font-weight: 600; }
+  a { color: var(--accent); }
+  .cta { margin-top: 3.5rem; text-align: center; }
+  .btn {
+    display: block;
+    background: var(--accent);
+    color: var(--on-accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    /* Padding rather than a fixed height, so the target grows with the text at
+       larger accessibility sizes instead of clipping it. */
+    padding: .85rem 1.5rem;
+    min-height: 44px;
+  }
+  .btn:hover { opacity: .9; }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  /* The button does nothing at all for a visitor with no mail client, and it
+     fails silently. This is the copyable way out of that. */
+  .fallback { color: var(--muted); font-size: .9rem; margin: 1rem 0 0; }
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .9rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>JLPT Map</h1>
+
+  <p class="lead">JLPT Map lays out the whole of Japanese grammar on one board,
+  from N5 to N1, so you can see where every point fits.</p>
+
+  <p>The board starts with sentences, words, writing, politeness and patterns.
+  Tap a card to zoom into it: verbs open into their groups and forms, particles
+  into their roles, compound sentences into the ways clauses join. Every card
+  is marked with its JLPT level, so you can show only what your exam needs.</p>
+
+  <p>Each card explains one point in a few plain sentences, with a table of
+  forms where the grammar changes, and example sentences with furigana, romaji
+  and a translation. Each piece of an example is coloured by the card that
+  explains it.</p>
+
+  <p>Add cards to a quiz and test yourself on what they mean, how they are
+  written and which piece of a sentence is missing. The questions you get wrong
+  wait for you at the top of the board until you have them right.</p>
+
+  <p>The cards are explained in English, Korean, Chinese, Spanish, French,
+  German, Portuguese, Italian, Russian, Vietnamese, Thai and Hindi.</p>
+
+  <div class="cta">
+    <a class="btn" href="mailto:hello@jlptmap.com?subject=JLPT%20Map%20feedback">Send feedback</a>
+
+    <p class="fallback">Or write to
+    <a href="mailto:hello@jlptmap.com">hello@jlptmap.com</a></p>
+  </div>
+
+  <footer><a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Use</a></footer>
+
+</main>
+</body>
+</html>
